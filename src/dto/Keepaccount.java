@@ -4,6 +4,8 @@ public class Keepaccount {
 
 	private int spending;
 	private int income;
+ private int test ;
+
 
 	public Keepaccount(int spending, int income) {
 		// TODO 自動生成されたコンストラクター・スタブ
