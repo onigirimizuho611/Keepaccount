@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-登録しました！
+登録できていません！！
+<br>
 <a href="/Kadai27_62/Top">戻る</a>
 <br>
 </body>

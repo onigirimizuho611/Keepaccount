@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/Kadai27_62/RegisterServlet" methood="get">
+<form action="/Kadai27_62/RegisterResultServlet" method="get">
 収入<input type=text name = income>
 <br>
 支出<input type=text name = spending>
