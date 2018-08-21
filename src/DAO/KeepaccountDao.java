@@ -20,11 +20,12 @@ public static void DataDAO(String key2 , String key3) {
 		Class.forName("com.mysql.jdbc.Driver");
 
 		con = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/friends?useSSL=false",
+				"jdbc:mysql://localhost:3306/keepaccount?useSSL=false",
 				"root",
 				"sukonnbu611");
 
-		String sql = "INSERT INTO keepaccount(income,spending) VALUES(?,?)";
+		String sql = "INSERT INTO keepaccount(income,spending) VALUES(?,?);";
+
 		pstmt = con.prepareStatement(sql);
 
 		pstmt.setString(1,key2);
@@ -70,17 +71,23 @@ public static ArrayList<Keepaccount> getAllList() {
 		Class.forName("com.mysql.jdbc.Driver");
 
 		con = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/friends?useSSL=false",
+				"jdbc:mysql://localhost:3306/keepaccount?useSSL=false",
 				"root",
 				"sukonnbu611");
 
-		String sql = "select * from keepaccount";
+		String sql = "SELECT * FROM keepaccount;";
+
 		pstmt = con.prepareStatement(sql);
+
 		rs = pstmt.executeQuery();
+
 		while(rs.next() ==true){
 			String income = rs.getString("income");
 			String spending = rs.getString("spending");
-			resultList.add(new Keepaccount(income,spending));
+
+			Keepaccount keepaccount = new Keepaccount(income,spending);
+
+			resultList.add(keepaccount);
 		}
 
 	} catch(ClassNotFoundException e){
@@ -89,10 +96,7 @@ public static ArrayList<Keepaccount> getAllList() {
 	} catch(SQLException e){
 		System.out.println("DBアクセス時にエラーが発生しました");
 		e.printStackTrace();
-	}
-	finally
-
-	{
+	}finally{
 		try{
 			if(pstmt != null) {
 				pstmt.close();

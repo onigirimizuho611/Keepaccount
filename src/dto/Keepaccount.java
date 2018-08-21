@@ -6,7 +6,6 @@ public class Keepaccount {
 	private String income;
 
 	public Keepaccount(){
-
 	}
 
 	public Keepaccount(String spending, String income) {
