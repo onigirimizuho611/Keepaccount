@@ -2,26 +2,28 @@ package dto;
 
 public class Keepaccount {
 
-	private int spending;
-	private int income;
- private int test ;
+	private String spending;
+	private String income;
 
+	public Keepaccount(){
 
-	public Keepaccount(int spending, int income) {
+	}
+
+	public Keepaccount(String spending, String income) {
 		// TODO 自動生成されたコンストラクター・スタブ
 		this.spending = spending;
 		this.income = income;
 	}
-	public int getspending() {
+	public String getspending() {
 		return spending;
 	}
-	public void setspending(int spending){
+	public void setspending(String spending){
 		this.spending = spending;
 	}
-	public int getincome() {
+	public String getincome() {
 		return income;
 	}
-	public void setincome(int income){
+	public void setincome(String income){
 		this.income = income;
 	}
 }
