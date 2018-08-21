@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="Kadai27_62/Alllist">一覧表示</a>
+<a href="/Kadai27_62/Alllist">一覧表示</a>
 <br>
 <a href="/Kadai27_62/RegisterServlet">登録します</a>
 <br>
